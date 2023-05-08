@@ -10,18 +10,17 @@ Este projeto foi desenvolvido com o objetivo de fornecer um exemplo completo de 
 
 Capítulo 1:
 
-Configuração do ambiente
-Desenvolvimento com GPS
-Descrição do SLint
-Gestos
-TypeScript
+Configuração do ambiente de desenvolvimento com Node.js
+EsLint
+Jest + TypeScript
 Tipos nos testes
-Teste de integração com super teste
+Teste de integração com Superteste+types
 Variáveis globais e tipos
+Setup de servidor Node.js com Overnightjs (express)
 
 Capítulo 2:
 
-Integração com o serviço de meteorologia externo (Storm Glass)
+Integração com o serviço de meteorologia externo (stormglass.io)
 Design da API
 Boas práticas de tratamento de erros
 Configuração dinâmica com node-config
@@ -42,18 +41,18 @@ Teste de integração com o Nock
 Capítulo 5:
 
 Validações avançadas com Mongoose
-Encriptação de senha com Bcrypt
+Encriptação de senha com Bcrypt e Mongoose
 Unificação dos controles em um só usando o AbstractController
-Uso de Jason Upton Express Middleware
-TypeScript com modulo de argumentação
+Uso de Json web Token - Gerando e validando tokens
+Express Middleware
+TypeScript com modulo de argumentação - module augmentation
 
 Capítulo 6:
 
-Ambiente de produção e contínuo depoimento com Hit Hard Work
-Setup do ambiente da Amber
-Tampa do Bit Rough Road
-Ritmo Bolso
-Deploy automático para obra
+Ambiente de produção e continuou deployment
+Setup do ambiente da Umber
+Setup do github Workflows para rodar os testes
+Setup do Github Workflows para fazer deploy automaticamente para o Umbler.
 
 Capítulo 7:
 
