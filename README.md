@@ -1,4 +1,5 @@
-Descrição do Projeto:
+
+## Descrição do Projeto:
 
 Este é um projeto de uma API RESTful desenvolvida em Node.js utilizando TypeScript e MongoDB. 
 A aplicação consiste em um serviço de previsão do tempo, que utiliza a API externa para obter os dados meteorológicos e realiza cálculos para gerar uma pontuação de rating para determinada localidade.
@@ -8,65 +9,66 @@ A API também inclui recursos como autenticação de usuário, criptografia de s
 
 Este projeto foi desenvolvido com o objetivo de fornecer um exemplo completo de como desenvolver uma API RESTful moderna e escalável em Node.js, utilizando TypeScript e MongoDB.
 
-Capítulo 1:
+1. Capítulo
 
-Configuração do ambiente de desenvolvimento com Node.js
-EsLint
-Jest + TypeScript
-Tipos nos testes
-Teste de integração com Superteste+types
-Variáveis globais e tipos
-Setup de servidor Node.js com Overnightjs (express)
+- Configuração do ambiente
+- Desenvolvimento com GPS
+- Descrição do SLint
+- Gestos
+- TypeScript
+- Tipos nos testes
+- Teste de integração com super teste
+- Variáveis globais e tipos
 
-Capítulo 2:
+2. Capítulo
 
-Integração com o serviço de meteorologia externo (stormglass.io)
-Design da API
-Boas práticas de tratamento de erros
-Configuração dinâmica com node-config
-Uso de TypeScript da maneira correta
+- Integração com o serviço de meteorologia externo (Storm Glass)
+- Design da API
+- Boas práticas de tratamento de erros
+- Configuração dinâmica com node-config
+- Uso de TypeScript da maneira correta
 
-Capítulo 3:
+3. Capítulo
 
-Criação do serviço de Forecast
-Uso dos dados da área externa
-Cálculo de rating
+- Criação do serviço de Forecast
+- Uso dos dados da área externa
+- Cálculo de rating
 
-Capítulo 4:
+4. Capítulo
 
-Modo de usuário
-Integração com o banco de dados MongoDB utilizando Mongoose
-Teste de integração com o Nock
+- Modo de usuário
+- Integração com o banco de dados MongoDB utilizando Mongoose
+- Teste de integração com o Nock
 
-Capítulo 5:
+5. Capítulo
 
-Validações avançadas com Mongoose
-Encriptação de senha com Bcrypt e Mongoose
-Unificação dos controles em um só usando o AbstractController
-Uso de Json web Token - Gerando e validando tokens
-Express Middleware
-TypeScript com modulo de argumentação - module augmentation
+- Validações avançadas com Mongoose
+- Encriptação de senha com Bcrypt
+- Unificação dos controles em um só usando o AbstractController
+- Uso de Jason Upton Express Middleware
+- TypeScript com modulo de argumentação
 
-Capítulo 6:
+6. Capítulo
 
-Ambiente de produção e continuou deployment
-Setup do ambiente da Umber
-Setup do github Workflows para rodar os testes
-Setup do Github Workflows para fazer deploy automaticamente para o Umbler.
+- Ambiente de produção e contínuo depoimento com Hit Hard Work
+- Setup do ambiente da Amber
+- Tampa do Bit Rough Road
+- Ritmo Bolso
+- Deploy automático para obra
 
-Capítulo 7:
+7. Capítulo
 
-Boas práticas de software na cloud
-Distribuição do login utilizando o Pino
-Aplicação de Graceful shutdown
-Formatação do padrão de erros da API
+- Boas práticas de software na cloud
+- Distribuição do login utilizando o Pino
+- Aplicação de Graceful shutdown
+- Formatação do padrão de erros da API
 
-Capítulo 8:
+8. Capítulo
 
-Lógica de rating
+- Lógica de rating
 
-Capítulo 9:
+9. Capítulo
 
-Teste ponta a ponta da aplicação usando front-end
-Entendimento da importância do limite - Rate limit
-Documentação com Open API
+- Teste ponta a ponta da aplicação usando front-end
+- Entendimento da importância do limite - Rate limit
+- Documentação com Open API
