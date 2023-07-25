@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 import { ForecastController } from './controllers/forecast';
 import * as database from '@src/database';
 import { BeachesController } from './controllers/beaches';
-
+import { UsersController } from './controllers/users';
 export class SetupServer extends Server {
   /*
    * same as this.port = port, declaring as private here will
@@ -33,7 +33,12 @@ export class SetupServer extends Server {
   private setupControllers(): void {
     const forecastController = new ForecastController();
     const beachesController = new BeachesController();
-    this.addControllers([forecastController, beachesController]);
+    const usersController = new UsersController();
+    this.addControllers([
+      forecastController, 
+      beachesController,
+      usersController,
+    ]);
   }
 
   public getApp(): Application {
