@@ -7,13 +7,18 @@ export enum BeachPosition {
   N = 'N',
 }
 
+export interface BeachUser {
+  id: string;
+  data: object;
+}
+
 export interface Beach {
   _id?: string;
   name: string;
   position: BeachPosition;
   lat: number;
   lng: number;
-  user: object;
+  user: BeachUser | string;
 }
 
 const schema = new mongoose.Schema<Beach>(
