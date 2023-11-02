@@ -7,24 +7,21 @@ export enum BeachPosition {
   N = 'N',
 }
 
-export interface BeachUser {
-  id: string;
-  data: object;
-}
-
 export interface Beach {
   _id?: string;
   name: string;
   position: BeachPosition;
   lat: number;
   lng: number;
-  user: BeachUser | string;
+  user: object;
 }
 
-const schema = new mongoose.Schema<Beach>(
+interface BeachDocument extends Omit<Beach, '_id'>, Document {}
+
+const beachSchema = new mongoose.Schema<BeachDocument>(
   {
     name: { type: String, required: true },
-    position: { type: String, required: true },
+    position: { type: String, enum: Object.values(BeachPosition), required: true },
     lat: { type: Number, required: true },
     lng: { type: Number, required: true },
     user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
@@ -40,5 +37,6 @@ const schema = new mongoose.Schema<Beach>(
   }
 );
 
-interface BeachModel extends Omit<Beach, '_id'>, Document {}
-export const Beach: Model<BeachModel> = mongoose.model<BeachModel>('Beach', schema);
+const BeachModel: Model<BeachDocument> = mongoose.model<BeachDocument>('Beach', beachSchema);
+
+export default BeachModel;
