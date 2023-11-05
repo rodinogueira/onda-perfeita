@@ -4,7 +4,7 @@
 ## Conteúdo do Capítulo 6
 
 - [C06P02] - Produção - Continuous Integration (CI) com Github Actions Workflows e Node.js
-- [C06P03] - Produção - Continuous Deployment com Github Actions Workflows e Umbler
+- [C06P03] - Produção - Continuous Deployment com Github Actions Workflows e Heroku
 
 ## Acesso à Aplicação
 
