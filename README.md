@@ -1,3 +1,16 @@
+
+# OndaPerfeita
+
+## Conteúdo do Capítulo 6
+
+- [C06P02] - Produção - Continuous Integration (CI) com Github Actions Workflows e Node.js
+- [C06P03] - Produção - Continuous Deployment com Github Actions Workflows e Umbler
+
+## Acesso à Aplicação
+
+A aplicação está disponível em [ondaperfeita](https://ondaperfeita-d27fff97cafb.herokuapp.com/).
+
+
 ## Descrição do Projeto:
 
 Este é um projeto de uma API RESTful desenvolvida em Node.js utilizando TypeScript e MongoDB. 
@@ -7,6 +20,7 @@ O projeto está dividido em 10 capítulos, que abordam desde a configuração do
 A API também inclui recursos como autenticação de usuário, criptografia de senha, validação de entrada e saída de dados, e integração com o banco de dados MongoDB.
 
 Este projeto foi desenvolvido com o objetivo de fornecer um exemplo completo de como desenvolver uma API RESTful moderna e escalável em Node.js, utilizando TypeScript e MongoDB.
+
 
 1. Capítulo
 
