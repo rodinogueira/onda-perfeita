@@ -1,13 +1,13 @@
 import { Controller, Get } from '@overnightjs/core';
 import { Request, Response } from 'express';
-import { Forecast } from '@src/services/forecast';
 import { Beach } from '@src/models/beach';
 import logger from '@src/logger';
 
 const forecast = new Forecast();
 
 @Controller('forecast')
-export class ForecastController {
+@ClassMiddleware(authMiddleware)
+export class ForecastController extends BaseController {
   @Get('')
   public async getForecastForLoggerUser(
     _: Request, 
