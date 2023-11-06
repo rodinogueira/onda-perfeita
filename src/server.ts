@@ -35,9 +35,9 @@ export class SetupServer extends Server {
   private setupExpress(): void {
     this.app.use(bodyParser.json());
     this.app.use(
-      expressPino(
-        logger
-      )     
+      expressPino({
+        logger,
+      })     
     )
     this.app.use(
       cors({
