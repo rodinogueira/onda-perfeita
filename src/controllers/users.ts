@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Controller,Get, Middleware, Post } from '@overnightjs/core';
 =======
 import { Controller, Post, Get, Middleware } from '@overnightjs/core';
 >>>>>>> C08P01
+=======
+import { Controller, Post, Get, Middleware } from '@overnightjs/core';
+>>>>>>> f4d420ebe680b02468c0c53958005feadcab1448
 import { Response, Request } from 'express';
 import { User } from '@src/models/user';
 import AuthService from '@src/services/auth';
@@ -57,6 +61,5 @@ export class UsersController extends BaseController {
         });
       }
       return res.send({ user })
-
   }
 }
