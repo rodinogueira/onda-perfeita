@@ -1,0 +1,43 @@
+# Dependências
+/node_modules
+
+# Arquivos de compilação
+/build
+/dist
+
+# Arquivos de ambiente
+.env
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Arquivos de build do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração do editor
+.vscode
+.idea
+
+# Arquivos de cache
+.cache
+
+# Arquivos de compilação
+*.swp
+*.swo
+
+# Arquivos de teste
+/coverage
+
+# Arquivos de configuração específicos do sistema operacional
+.DS_Store
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+
+# Arquivos de backup
+*~
+
+# Outros arquivos e diretórios específicos do projeto
+# Adicione aqui qualquer arquivo ou diretório específico do seu projeto que você queira excluir do controle de versão.
