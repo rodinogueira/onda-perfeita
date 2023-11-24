@@ -1,4 +1,15 @@
 [build]
   base = "web"
-  command = "npm run build:web"
-  publish = "web/build"
+  command = "npm run build"
+  publish = "/opt/build/repo/web/build"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_VERSION = "14"
+
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = [
+      "node_modules/.cache",
+    ]
