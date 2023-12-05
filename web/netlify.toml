@@ -1,4 +1,0 @@
-[build]
-  base = "main"
-  publish = "web"
-  command = "npm install --force && npm run build"
