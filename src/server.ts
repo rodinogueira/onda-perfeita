@@ -1,19 +1,22 @@
-import './util/modules-alias';
+import './util//modules-alias.ts';
 import { Server } from '@overnightjs/core';
 import { Application } from 'express';
 import bodyParser from 'body-parser';
 import * as http from 'http';
 import expressPino from 'express-pino-logger';
 import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import * as OpenApiValidator from 'express-openapi-validator';
+import { OpenAPIV3 } from 'express-openapi-validator/dist/framework/types';
 import { ForecastController } from './controllers/forecast';
 import * as database from '@src/database';
 import { BeachesController } from './controllers/beaches';
 import { UsersController } from './controllers/users';
 import logger from './logger';
+import apiSchema from './api-schema.json';
 
 export class SetupServer extends Server {
   private server?: http.Server;
-
   /*
    * same as this.port = port, declaring as private here will
    * add the port variable to the SetupServer instance
@@ -28,6 +31,7 @@ export class SetupServer extends Server {
    */
   public async init(): Promise<void> {
     this.setupExpress();
+    await this.docsSetup();
     this.setupControllers();
     await this.databaseSetup();
   }
@@ -37,15 +41,22 @@ export class SetupServer extends Server {
     this.app.use(
       expressPino({
         logger,
-      })     
-    )
+      })
+    );
     this.app.use(
       cors({
         origin: '*',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type', 'Authorization', 'x-access-token']
       })
     );
+  }
+
+  private async docsSetup(): Promise<void> {
+    this.app.use('/docs', swaggerUi.serve, swaggerUi.setup(apiSchema));
+    this.app.use(OpenApiValidator.middleware({
+      apiSpec: apiSchema as OpenAPIV3.Document,
+      validateRequests: false, //will be implemented in step2
+      validateResponses: false, //will be implemented in step2
+    }));
   }
 
   private setupControllers(): void {
@@ -53,7 +64,7 @@ export class SetupServer extends Server {
     const beachesController = new BeachesController();
     const usersController = new UsersController();
     this.addControllers([
-      forecastController, 
+      forecastController,
       beachesController,
       usersController,
     ]);
@@ -69,11 +80,21 @@ export class SetupServer extends Server {
 
   public async close(): Promise<void> {
     await database.close();
+    if (this.server) {
+      await new Promise((resolve, reject) => {
+        this.server?.close((err) => {
+          if (err) {
+            return reject(err);
+          }
+          resolve(true);
+        });
+      });
+    }
   }
 
   public start(): void {
-    this.app.listen(this.port, () => {
-      logger.info('Server listening fo port:', this.port);
-    })
+    this.server = this.app.listen(this.port, () => {
+      logger.info('Server listening on port: ' + this.port);
+    });
   }
 }
