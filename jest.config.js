@@ -10,5 +10,6 @@ module.exports = {
   moduleNameMapper: {
     '@src/(.*)': '<rootDir>/src/$1',
     '@test/(.*)': '<rootDir>/test/$1',
+    axios: 'axios/dist/node/axios.cjs',
   }
 };
